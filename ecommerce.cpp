@@ -149,7 +149,7 @@ void get_product_profit(string product_id) {
 
 void get_fewest_product(){
     string res = "";
-    int min = INT32_MAX;
+    int min = 2147483647; // int max value
     for(auto index : catalog){
         if(index.second.quantity<min){
             res = index.first;
@@ -162,7 +162,7 @@ void get_fewest_product(){
 
 void get_most_popular_product(){
     string res = "";
-    int max = INT32_MIN;
+    int max = -2147483647; // int min value
     for(auto index : catalog){
         if(index.second.sold>max){
             res = index.first;
